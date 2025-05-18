@@ -1,0 +1,17 @@
+#adminContent{
+  margin-left: 15%;
+  display: flex;
+  justify-content: center;
+}
+#adminContent h1{
+  margin-right: 200px;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+#adminContent p a
+{
+  border-radius: 20px;
+  font-size: 30px;
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,36 @@
+﻿@{
+    Layout = "_Layout";
+}
+<link rel="stylesheet" href="~/css/admin.css" asp-append-version="true" />
+<div class="text-center">
+    <h1 class="display-4">Bem-vindo, Aqui você tem acesso administrador!</h1>
+</div>
+
+<div id="adminContent" class="container">
+    <div class="row">
+        <h1>GERENCIAMENTO</h1>
+        <div class="col-md-4">
+            <p><a class="btn btn-secondary" href="@Url.Action("GerenciarProdutos", "Admin")">Gerenciar Produtos</a></p>
+        </div>
+    </div>
+</div>
+
+<div class="p-5">
+    <div class="border border-light border-3 rounded">
+        <div class="container">
+            <div class="p-5">
+                <div class="row">
+                    <div class="col-8">
+                        <h6>PEDIDOS</h6>
+                    </div>
+                </div>
+                <hr />
+                <div class="p-5 rounded shadow-sm" id="divTabelaPedidos">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="~/js/admin.js" asp-append-version="true"></script>
+

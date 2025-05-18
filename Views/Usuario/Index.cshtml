@@ -1,0 +1,82 @@
+﻿@{
+    Layout = "_Layout";
+}
+<div class="text-center">
+    <h1 class="display-4">Bem-vindo, Aqui você tem acesso Usuario</h1>
+</div>
+
+<div class="p-5">
+    <div class="border border-light border-3 rounded">
+        <div class="container">
+            <div class="p-5">
+                <div class="row">
+                    <div class="col-8">
+                        <h6>MEUS PEDIDOS:</h6>
+                    </div>
+                    <div class="col-4">
+                        <button id="novoPedido"class="btn btn-sm btn-outline-success">Novo Pedido</button>
+                    </div>
+                </div>
+                <hr />
+                <div class="p-5 rounded shadow-sm" id="divTabelaPedidos">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modalNovoPedido" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h6 class="modal-title"></h6>
+            </div>
+
+            <div class="modal-body">
+                <div id="produtosDisponiveis">
+                    <h3>Produtos Disponíveis</h3>
+                    <table id="tabelaProdutos" cellpadding="10" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Descrição</th>
+                                <th>Preço</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            
+            <hr />
+
+            <div class="form-group">
+                <h3>Produtos no Pedido</h3>
+                <table id="tabelaCarrinho" cellpadding="10" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Descrição</th>
+                            <th>Preço</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+
+                <div>
+                    <h4>Total: R$ <span id="valorTotal">0.00</span></h4>
+                    <button class="btnSalvar">Salvar Pedido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="~/js/usuario.js" asp-append-version="true"></script>
+
+
+
+
