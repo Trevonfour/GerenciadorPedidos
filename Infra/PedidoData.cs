@@ -11,13 +11,20 @@ namespace GerenciadorDePedidos.Infra
 {
     public class PedidoData
     {
-        private readonly string connectionString = "Server=localhost\\SQLEXPRESS;Database=GERENCIADOR_DE_PEDIDOS;Trusted_Connection=True;TrustServerCertificate=True;";
+        private readonly string _connectionString;
+
+        public PedidoData(IConfiguration configuration)
+        {
+            _connectionString = configuration.GetConnectionString("DefaultConnection");
+        }
+
+        
 
         public IEnumerable<dynamic> ObterTodosPedidos()
         {
             string query = "EXEC CONSULTAR_TODOS_PEDIDOS;";
 
-            using (IDbConnection connection = new SqlConnection(connectionString))
+            using (IDbConnection connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
                 var result = connection.Query(query);
@@ -30,7 +37,7 @@ namespace GerenciadorDePedidos.Infra
         {
             string query = "EXEC CONSULTAR_TODOS_PEDIDOS_USUARIO @Id;";
 
-            using (IDbConnection connection = new SqlConnection(connectionString))
+            using (IDbConnection connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
                 var result = connection.Query(query, new { Id = cd_usuario });
@@ -42,7 +49,7 @@ namespace GerenciadorDePedidos.Infra
         {
             string query = "EXEC CONSULTAR_DETALHE_PEDIDO @NUMERO_PEDIDO;";
 
-            using (IDbConnection connection = new SqlConnection(connectionString))
+            using (IDbConnection connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
                 var result = connection.Query(query, new { NUMERO_PEDIDO = numeroPedido });
@@ -55,7 +62,7 @@ namespace GerenciadorDePedidos.Infra
 
             string query = "EXEC INSERIR_PEDIDO @NUMERO_PEDIDO, @CD_USUARIO, @CD_PRODUTO, @VALOR_TOTAL;";
 
-            using (IDbConnection connection = new SqlConnection(connectionString))
+            using (IDbConnection connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
                 for (int i = 0; i < pedido.Produtos.Count; i++)
@@ -76,7 +83,7 @@ namespace GerenciadorDePedidos.Infra
         {
             string query = "SELECT * FROM PEDIDOS WHERE NUMERO_PEDIDO = @NUMERO_PEDIDO;";
 
-            using (IDbConnection connection = new SqlConnection(connectionString))
+            using (IDbConnection connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
                 var result = connection.Query(query, new { NUMERO_PEDIDO = numeroPedido });

@@ -64,11 +64,13 @@ C:\Projetos\InnoLevels\GerenciadorDePedidos\obj\Debug\net9.0\GerenciadorDePedido
 C:\Projetos\InnoLevels\GerenciadorDePedidos\obj\Debug\net9.0\GerenciadorDePedidos.MvcApplicationPartsAssemblyInfo.cache
 C:\Projetos\InnoLevels\GerenciadorDePedidos\obj\Debug\net9.0\GerenciadorDePedidos.RazorAssemblyInfo.cache
 C:\Projetos\InnoLevels\GerenciadorDePedidos\obj\Debug\net9.0\GerenciadorDePedidos.RazorAssemblyInfo.cs
+C:\Projetos\InnoLevels\GerenciadorDePedidos\obj\Debug\net9.0\GerenciadorDePedidos.sourcelink.json
 C:\Projetos\InnoLevels\GerenciadorDePedidos\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Projetos\InnoLevels\GerenciadorDePedidos\obj\Debug\net9.0\scopedcss\bundle\GerenciadorDePedidos.styles.css
 C:\Projetos\InnoLevels\GerenciadorDePedidos\obj\Debug\net9.0\scopedcss\projectbundle\GerenciadorDePedidos.bundle.scp.css
 C:\Projetos\InnoLevels\GerenciadorDePedidos\obj\Debug\net9.0\compressed\kb247jkbvf-ghhwiqt303.gz
 C:\Projetos\InnoLevels\GerenciadorDePedidos\obj\Debug\net9.0\compressed\blmqunm0vx-61n19gt1b8.gz
+C:\Projetos\InnoLevels\GerenciadorDePedidos\obj\Debug\net9.0\compressed\z580q1azti-o7dzs7jpm8.gz
 C:\Projetos\InnoLevels\GerenciadorDePedidos\obj\Debug\net9.0\compressed\lzihs102mq-bqjiyaj88i.gz
 C:\Projetos\InnoLevels\GerenciadorDePedidos\obj\Debug\net9.0\compressed\ng9tl4dgja-c2jlpeoesf.gz
 C:\Projetos\InnoLevels\GerenciadorDePedidos\obj\Debug\net9.0\compressed\6yzh45cict-erw9l3u2r3.gz
@@ -128,6 +130,9 @@ C:\Projetos\InnoLevels\GerenciadorDePedidos\obj\Debug\net9.0\compressed\e5ymkk58
 C:\Projetos\InnoLevels\GerenciadorDePedidos\obj\Debug\net9.0\compressed\tbp30l0rbl-muycvpuwrr.gz
 C:\Projetos\InnoLevels\GerenciadorDePedidos\obj\Debug\net9.0\compressed\1t20c38rrk-87fc7y1x7t.gz
 C:\Projetos\InnoLevels\GerenciadorDePedidos\obj\Debug\net9.0\compressed\7x8vownyn6-mlv21k5csn.gz
+C:\Projetos\InnoLevels\GerenciadorDePedidos\obj\Debug\net9.0\compressed\v13fvs9jhp-nmf7f35yy1.gz
+C:\Projetos\InnoLevels\GerenciadorDePedidos\obj\Debug\net9.0\compressed\tqbmi7y1en-0jt53temik.gz
+C:\Projetos\InnoLevels\GerenciadorDePedidos\obj\Debug\net9.0\compressed\cpufw4hw6h-ksboe8dus0.gz
 C:\Projetos\InnoLevels\GerenciadorDePedidos\obj\Debug\net9.0\compressed\terle1nsyc-dhn5li6zin.gz
 C:\Projetos\InnoLevels\GerenciadorDePedidos\obj\Debug\net9.0\compressed\w4fqurzsct-dhn5li6zin.gz
 C:\Projetos\InnoLevels\GerenciadorDePedidos\obj\Debug\net9.0\staticwebassets.build.json
@@ -140,7 +145,3 @@ C:\Projetos\InnoLevels\GerenciadorDePedidos\obj\Debug\net9.0\refint\GerenciadorD
 C:\Projetos\InnoLevels\GerenciadorDePedidos\obj\Debug\net9.0\GerenciadorDePedidos.pdb
 C:\Projetos\InnoLevels\GerenciadorDePedidos\obj\Debug\net9.0\GerenciadorDePedidos.genruntimeconfig.cache
 C:\Projetos\InnoLevels\GerenciadorDePedidos\obj\Debug\net9.0\ref\GerenciadorDePedidos.dll
-C:\Projetos\InnoLevels\GerenciadorDePedidos\obj\Debug\net9.0\compressed\v13fvs9jhp-nmf7f35yy1.gz
-C:\Projetos\InnoLevels\GerenciadorDePedidos\obj\Debug\net9.0\compressed\tqbmi7y1en-0jt53temik.gz
-C:\Projetos\InnoLevels\GerenciadorDePedidos\obj\Debug\net9.0\compressed\cpufw4hw6h-ksboe8dus0.gz
-C:\Projetos\InnoLevels\GerenciadorDePedidos\obj\Debug\net9.0\compressed\z580q1azti-jh2cjuiv30.gz

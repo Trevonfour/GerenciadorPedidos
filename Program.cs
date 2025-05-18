@@ -1,5 +1,11 @@
+using GerenciadorDePedidos.Infra;
+
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
+builder.Services.AddScoped<PedidoData>();
+builder.Services.AddScoped<ProdutoData>();
+builder.Services.AddScoped<UsuarioData>();
 builder.Services.AddControllersWithViews();
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>

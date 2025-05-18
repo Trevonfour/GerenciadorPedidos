@@ -13,10 +13,10 @@ namespace GerenciadorDePedidos.Controllers
     [Route("User")]
     public class UsuarioController : Controller
     {
-        private readonly PedidoData pedidoData;
-        public UsuarioController()
+        private readonly PedidoData _pedidoData;
+        public UsuarioController(PedidoData pedidoData)
         {
-            pedidoData = new();
+            _pedidoData = pedidoData;
         }
 
         [HttpGet("Index")]
@@ -44,16 +44,16 @@ namespace GerenciadorDePedidos.Controllers
             pedido.NumeroPedido = RandomInt(100000000, 999999999).ToString();
             pedido.ValorTotal = valorTotal;
             ;
-            while (pedidoData.ValidarPedidoExistente(pedido.NumeroPedido)){}
+            while (_pedidoData.ValidarPedidoExistente(pedido.NumeroPedido)){}
                 pedido.NumeroPedido = RandomInt(100000000, 999999999).ToString();
-            pedidoData.AdicionarPedido(cd_usuario, pedido);
+            _pedidoData.AdicionarPedido(cd_usuario, pedido);
         }
         [HttpPost("RetornarTodosPedidosUsuario")]
         public IActionResult RetornarTodosPedidosUsuario(int cd_usuario)
         {
             try
             {
-                var pedidos = pedidoData.ObterTodosPedidosUsuario(cd_usuario);
+                var pedidos = _pedidoData.ObterTodosPedidosUsuario(cd_usuario);
                 return Json(pedidos);
             }
             catch (Exception ex)

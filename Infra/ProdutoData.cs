@@ -7,13 +7,18 @@ namespace GerenciadorDePedidos.Infra
 {
     public class ProdutoData
     {
-        private readonly string connectionString = "Server=localhost\\SQLEXPRESS;Database=GERENCIADOR_DE_PEDIDOS;Trusted_Connection=True;TrustServerCertificate=True;";
+        private readonly string _connectionString;
+
+        public ProdutoData(IConfiguration configuration)
+        {
+            _connectionString = configuration.GetConnectionString("DefaultConnection");
+        }
 
         public IEnumerable<dynamic> ObterTodosProdutos()
         {
             string query = "EXEC CONSULTAR_TODOS_PRODUTOS;";
 
-            using (IDbConnection connection = new SqlConnection(connectionString))
+            using (IDbConnection connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
                 var result = connection.Query(query);
@@ -26,7 +31,7 @@ namespace GerenciadorDePedidos.Infra
         {
             string query = "EXEC INSERIR_PRODUTO @NOME, @DESCRICAO, @PRECO;";
 
-            using (IDbConnection connection = new SqlConnection(connectionString))
+            using (IDbConnection connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
                 var parametros = new
@@ -43,7 +48,7 @@ namespace GerenciadorDePedidos.Infra
         {
             string query = "EXEC CONSULTAR_PRODUTO_ID @CD_PRODUTO;";
 
-            using (IDbConnection connection = new SqlConnection(connectionString))
+            using (IDbConnection connection = new SqlConnection(_connectionString))
             {
                 var parametro = new
                 {
@@ -57,7 +62,7 @@ namespace GerenciadorDePedidos.Infra
         {
             string query = "EXEC ATUALIZAR_DADOS_PRODUTO @CD_PRODUTO, @NOME, @DESCRICAO, @PRECO;";
 
-            using (IDbConnection connection = new SqlConnection(connectionString))
+            using (IDbConnection connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
                 var parametros = new
@@ -74,7 +79,7 @@ namespace GerenciadorDePedidos.Infra
         {
             string query = "EXEC EXCLUIR_PRODUTO_ID @CD_PRODUTO;";
 
-            using (IDbConnection connection = new SqlConnection(connectionString))
+            using (IDbConnection connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
                 var parametro = new
@@ -89,7 +94,7 @@ namespace GerenciadorDePedidos.Infra
         {
             string query = "EXEC VALIDAR_PRODUTO_PEDIDO @CD_PRODUTO;";
 
-            using (IDbConnection connection = new SqlConnection(connectionString))
+            using (IDbConnection connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
                 var parametro = new

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GerenciadorDePedidos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+36d0313056403ee3b8519bdc9f5c255e5ee147e1")]
 [assembly: System.Reflection.AssemblyProductAttribute("GerenciadorDePedidos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GerenciadorDePedidos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

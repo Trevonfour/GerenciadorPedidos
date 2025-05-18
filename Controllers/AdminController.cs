@@ -15,13 +15,13 @@ namespace GerenciadorDePedidos.Controllers
     [Route("Admin")]
     public class AdminController : Controller
     {
-        private readonly PedidoData pedidoData;
-        private ProdutoData produtoData;
+        private readonly PedidoData _pedidoData;
+        private readonly ProdutoData _produtoData;
 
-        public AdminController()
+        public AdminController(PedidoData pedidoData, ProdutoData produtoData)
         {
-            pedidoData = new();
-            produtoData = new();
+            _pedidoData = pedidoData;
+            _produtoData = produtoData;
         }
         private Usuario ObterUsuarioLogado()
         {
@@ -73,7 +73,7 @@ namespace GerenciadorDePedidos.Controllers
         {
             try
             {
-                var pedidos = pedidoData.ObterTodosPedidos();
+                var pedidos = _pedidoData.ObterTodosPedidos();
                 return Json(pedidos);
 
             }
@@ -88,7 +88,7 @@ namespace GerenciadorDePedidos.Controllers
         {
             try
             {
-                var produto = produtoData.ObterProdutoPorId(produtoId);
+                var produto = _produtoData.ObterProdutoPorId(produtoId);
                 return Json(produto);
 
             }
@@ -103,7 +103,7 @@ namespace GerenciadorDePedidos.Controllers
         {
             try
             {
-                produtoData.ExluirProdutoPorId(produtoId);
+                _produtoData.ExluirProdutoPorId(produtoId);
 
             }
             catch (Exception ex)
@@ -115,7 +115,7 @@ namespace GerenciadorDePedidos.Controllers
         [HttpPost("ValidarProdutoEmPedido")]
         public bool ValidarProdutoEmPedido(int produtoId)
         {
-            bool existe = produtoData.ValidarProdutoPedido(produtoId);
+            bool existe = _produtoData.ValidarProdutoPedido(produtoId);
             return existe;
 
         }
@@ -125,7 +125,7 @@ namespace GerenciadorDePedidos.Controllers
         {
             try
             {
-                produtoData.AtualizarDadosProduto(produto);
+                _produtoData.AtualizarDadosProduto(produto);
             }
             catch (Exception ex)
             {
@@ -138,7 +138,7 @@ namespace GerenciadorDePedidos.Controllers
         {
             try
             {
-                produtoData.InserirNovoProduto(produto);
+                _produtoData.InserirNovoProduto(produto);
             }
             catch (Exception ex)
             {

@@ -8,16 +8,16 @@ namespace GerenciadorDePedidos.Controllers;
 
 public class HomeController : Controller
 {   
-    private readonly ProdutoData produtoData;
-    private readonly UsuarioData usuarioData;
-    private readonly PedidoData pedidoData;
+    private ProdutoData _produtoData;
+    private readonly UsuarioData _usuarioData;
+    private readonly PedidoData _pedidoData;
     private Usuario usuario;
 
-    public HomeController()
+    public HomeController(PedidoData pedidoData, ProdutoData produtoData, UsuarioData usuarioData)
     {
-        usuarioData = new UsuarioData();
-        produtoData = new();
-        pedidoData = new();
+        _usuarioData = usuarioData;
+        _pedidoData = pedidoData;
+        _produtoData = produtoData;
     }
     public IActionResult Index()
     {
@@ -37,7 +37,7 @@ public class HomeController : Controller
     [HttpPost]
     public IActionResult Logar(string nomeUsuario, string senha)
     {
-        usuario = usuarioData.RetornarUsuario(nomeUsuario, senha);
+        usuario = _usuarioData.RetornarUsuario(nomeUsuario, senha);
 
         if (usuario != null)
         {
@@ -89,7 +89,7 @@ public class HomeController : Controller
     {
         try
         {
-            var produtos = produtoData.ObterTodosProdutos();
+            var produtos = _produtoData.ObterTodosProdutos();
             return Json(produtos);
         }
         catch (Exception ex)
@@ -102,7 +102,7 @@ public class HomeController : Controller
     {
         try
         {
-            var pedido = pedidoData.ConsultarDetalhesPedido(numeroPedido);
+            var pedido = _pedidoData.ConsultarDetalhesPedido(numeroPedido);
             return Json(pedido);
         }
         catch (Exception ex)
