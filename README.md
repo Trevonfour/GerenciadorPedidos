@@ -28,55 +28,44 @@
 
 <h4>Carrinho de Compras:</h4>
 
+<ul>
+  <li>Adicionar produtos ao carrinho.</li>
+  <li>Remover produtos do carrinho.</li>
+  <li>Visualizar o valor total dos produtos no carrinho.</li>
+</ul>
 
-Adicionar produtos ao carrinho.
 
-Remover produtos do carrinho.
+<h4>Gerar Pedido:</h4>
 
-Visualizar o valor total dos produtos no carrinho.
+<ul>
+  <li>Finalizar o pedido e registrá-lo no sistema.</li>
+  <li>Visualizar seus próprios pedidos e detalhes de cada um.</li>
+</ul>
 
-Gerar Pedido:
 
-Finalizar o pedido e registrá-lo no sistema.
 
-Visualizar seus próprios pedidos e detalhes de cada um.
+<h2>Funcionalidades</h2>
 
-Estrutura do Projeto
+<h3>Estrutura do Projeto</h3>
 
-Frontend: HTML, CSS, Bootstrap, jQuery
+<ul>
+  <li>Frontend: HTML, CSS, Bootstrap, jQuery</li>
+  <li>Backend: ASP.NET MVC</li>
+  <li>Banco de Dados: SQL Server</li>
+</ul>
 
-Backend: ASP.NET MVC
+<h1>Instalação e Configuração</h1>
 
-Banco de Dados: SQL Server
+<h2>Clone o repositório:</h2>
 
-Formato de Moeda: Formatação em tempo real para o campo de preço, permitindo que o usuário visualize o valor em formato monetário enquanto digita.
+<ul>
+  <li>Clone o repostório</li>
+  <li>Configure a string de conexão no appsettings.json.</li>
+  <li>Na pasta BancoDeDados, você vai encontrar o arquivo com o script para criar as tabelas e as procedures</li>
+  <li>Execute o projeto</li>
+</ul>
 
-Instalação e Configuração
 
-Clone o repositório:
+<h3>Autor</h3>
 
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-
-Abra o projeto no Visual Studio.
-
-Configure a string de conexão no web.config ou appsettings.json.
-
-Execute as migrações do banco de dados para criar as tabelas necessárias.
-
-Execute o projeto e acesse a aplicação pelo navegador.
-
-Tecnologias Utilizadas
-
-ASP.NET MVC
-
-jQuery
-
-Bootstrap
-
-SQL Server
-
-JavaScript
-
-Autor
-
-Desenvolvido por Seu Nome.
+<p>Desenvolvido por Alexandre Silva.</p>
